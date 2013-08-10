@@ -65,10 +65,10 @@ std::wstring* GetCurrentSongsName(HWND hwndWinamp)
 
     GetWindowTextW(hwndWinamp,wtit,1024);
 	std::wstring *strTitle = new std::wstring(wtit);
-	if ((strTitle->find(L"**") < strTitle->length()-3)&&(strTitle->find(L"**")!=strTitle->npos)) {
-		strTitle->assign(strTitle->substr(strTitle->find(L" ", strTitle->find(L"**"))+1));
-	}
-    strTitle->assign(strTitle->substr(strTitle->find(L" ")+1)); // Deletes the . and the following white space
+	//if ((strTitle->find(L"**") < strTitle->length()-3)&&(strTitle->find(L"**")!=strTitle->npos)) {
+	//	strTitle->assign(strTitle->substr(strTitle->find(L" ", strTitle->find(L"**"))+1));
+	//}
+    //strTitle->assign(strTitle->substr(strTitle->find(L" ")+1)); // Deletes the . and the following white space
     strTitle->erase(strTitle->find(L"- Winamp"));// Deletes the trailing "- winamp"		
 
 	return strTitle; 
